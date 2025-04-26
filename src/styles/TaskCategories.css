@@ -1,0 +1,123 @@
+.task-categories {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.category-btn.active {
+  font-weight: 500;
+}
+
+.category-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.category-work {
+  color: #3366cc;
+}
+
+.category-work .category-dot {
+  background-color: #3366cc;
+}
+
+.category-study {
+  color: #dc3912;
+}
+
+.category-study .category-dot {
+  background-color: #dc3912;
+}
+
+.category-creative {
+  color: #ff9900;
+}
+
+.category-creative .category-dot {
+  background-color: #ff9900;
+}
+
+.category-personal {
+  color: #109618;
+}
+
+.category-personal .category-dot {
+  background-color: #109618;
+}
+
+.category-health {
+  color: #990099;
+}
+
+.category-health .category-dot {
+  background-color: #990099;
+}
+
+.new-category-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: #777;
+}
+
+.new-category-btn span {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category-btn.all-categories {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.category-btn.all-categories.active {
+  background-color: #e0e0e0;
+  font-weight: 600;
+}
+
+.category-custom {
+  color: #8e44ad;
+}
+
+.category-custom .category-dot {
+  background-color: #8e44ad;
+  background-image: linear-gradient(45deg, #8e44ad, #9b59b6);
+} 

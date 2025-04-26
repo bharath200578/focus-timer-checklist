@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #646cff;
+  --primary-dark-color: #5a5fe6;
+  --bg-color: #f7f7f7;
+  --card-bg-color: #ffffff;
+  --text-color: #333;
+  --text-secondary-color: #666;
+  --heading-color: #333;
+  --border-color: #e0e0e0;
+  --disabled-color: #cccccc;
+  --input-bg-color: #f5f5f5;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+.timer-stats-column, .task-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Demo Mode Banner */
+.demo-mode-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #ff7f7f;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.demo-mode-banner p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.demo-mode-banner strong {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.demo-mode-link {
+  color: white;
+  text-decoration: underline;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.demo-mode-link:hover {
+  opacity: 0.8;
+}
+
+.demo-mode-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 1;
+}
+
+.demo-mode-close:hover {
+  opacity: 0.8;
+}
+
+/* When demo banner is present, add margin to the body */
+body.has-demo-banner {
+  margin-top: 44px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .timer-stats-column {
+    order: 1;
+  }
+  
+  .task-column {
+    order: 2;
+  }
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
