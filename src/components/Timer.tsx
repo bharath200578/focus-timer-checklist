@@ -12,7 +12,8 @@ export const Timer: React.FC = () => {
     startTimer,
     pauseTimer,
     resetTimer,
-    skipTimer
+    skipTimer,
+    currentTask
   } = useApp();
   
   // Format time as MM:SS
@@ -48,7 +49,7 @@ export const Timer: React.FC = () => {
       
       <div className="timer-display">
         <h1>{formatTime(currentTime)}</h1>
-        <p>#1 Focus Session</p>
+        <p>{currentTask ? currentTask.title : "No task selected"}</p>
       </div>
       
       <div className="timer-controls">

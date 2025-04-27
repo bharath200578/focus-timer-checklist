@@ -49,4 +49,14 @@ export interface ProductivityInsight {
     day: string;
     average: number; // in minutes
   };
+}
+
+export interface StreakData {
+  lastActiveDate: string; // ISO date string
+  currentStreak: number;
+  longestStreak: number;
+  streakHistory: {
+    date: string; // ISO date string
+    streak: number;
+  }[];
 } 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../contexts/AppContext';
 import { Charts } from './Charts';
+import { StreakGraph } from './StreakGraph';
 import '../styles/Stats.css';
 
 export const Stats: React.FC = () => {
@@ -78,6 +79,8 @@ export const Stats: React.FC = () => {
           </div>
         </div>
       </section>
+      
+      <StreakGraph />
     </div>
   );
 }; 
