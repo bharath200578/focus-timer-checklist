@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTaskStore } from '../../store/taskStore';
 import TaskItem from './TaskItem';
 import { SlidersHorizontal } from 'lucide-react';
+import AddTaskModal from './AddTaskModal';
 
 export default function TaskList() {
+  const [isAddTaskModalOpen, setIsAddTaskModalOpen] = useState(false);
   const tasks = useTaskStore((state) => state.tasks);
   const todayTasks = useTaskStore((state) => state.getTodayTasks());
   
@@ -22,6 +24,7 @@ export default function TaskList() {
           
           <button
             aria-label="Add task"
+            onClick={() => setIsAddTaskModalOpen(true)}
             className="rounded-md bg-primary-500 px-3 py-1 text-sm font-medium text-white transition-colors hover:bg-primary-600"
           >
             Add Task
@@ -40,6 +43,11 @@ export default function TaskList() {
           </div>
         )}
       </div>
+
+      <AddTaskModal 
+        isOpen={isAddTaskModalOpen} 
+        onClose={() => setIsAddTaskModalOpen(false)} 
+      />
     </div>
   );
 }
